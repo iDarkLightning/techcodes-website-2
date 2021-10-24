@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { motion, AnimatePresence } from "framer-motion";
-import { Head } from "@components";
+import { Head, Nav } from "@components";
 import { GlobalStyle } from "@styles";
 
 const variants = {
@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
           />
 
           <GlobalStyle />
-          {/* <Nav location={location} /> */}
+          <Nav />
           <AnimatePresence exitBeforeEnter>
             <motion.main
               key={location.pathname}
