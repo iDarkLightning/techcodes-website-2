@@ -1,7 +1,7 @@
-import { Box, Center, Flex, Heading, HStack, Icon, IconButton, Image } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import React from "react";
+import { Center, Flex, IconButton, Image } from "@chakra-ui/react";
 import LogoIcon from "@images/logo.svg";
+import React from "react";
 
 interface NavProps {}
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "./src/components";
+import "swiper/css";
 
 export const wrapPageElement = ({ element, props }) => {
   console.clear();

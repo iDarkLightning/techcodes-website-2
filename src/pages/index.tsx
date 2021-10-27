@@ -1,12 +1,12 @@
-import { Heading } from "@chakra-ui/layout";
 import React from "react";
 import { Helmet } from "react-helmet";
+import { HomeView } from "@views";
 
 const HomePage = () => {
   return (
     <>
       <Helmet title="Hello world!" />
-      <Heading color="pink">hello</Heading>
+      <HomeView />
     </>
   );
 };

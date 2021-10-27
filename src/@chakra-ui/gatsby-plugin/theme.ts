@@ -9,6 +9,11 @@ const theme = {
     undertone: "#161616",
     gray: "#969696",
     pink: "#FF8FE6",
+    blueText: "#7087FE",
+    lightBlue: "#126DD9",
+  },
+  fonts: {
+    heading: "",
   },
 };
 
