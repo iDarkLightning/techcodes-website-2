@@ -7,10 +7,11 @@ const theme = {
     accent: "#E7E7E7",
     yellow: "#FFCC66",
     undertone: "#161616",
-    gray: "#969696",
+    gray: "#DCDCDC",
     pink: "#FF8FE6",
     blueText: "#7087FE",
     lightBlue: "#126DD9",
+    darkText: "#141414",
   },
   fonts: {
     heading: "",
