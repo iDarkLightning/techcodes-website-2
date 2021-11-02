@@ -88,17 +88,17 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
                 offer. It is with their help that CODE can continue to bring computer <br />
                 science to those who need it most and strengthen their passion.
               </Text>
-              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+              <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
                 <Image src={ReplitImage} h="10vh" />
                 <Image src={GoDaddyImage} h="10vh" />
                 <Image src={OnePassword} h="10vh" />
               </HStack>
-              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+              <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
                 <Image src={StickerImage} h="10vh" />
                 <Image src={PrincetonImage} h="10vh" />
                 <Image src={LinodeImage} h="10vh" />
               </HStack>
-              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+              <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
                 <Image src={WolframImage} h="10vh" />
                 <Image src={EchoImage} h="10vh" />
               </HStack>

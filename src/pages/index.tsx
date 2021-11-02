@@ -1,11 +1,9 @@
-import React from "react";
-import { Helmet } from "react-helmet";
 import { HomeView } from "@views";
+import React from "react";
 
 const HomePage = () => {
   return (
     <>
-      <Helmet title="Hello world!" />
       <HomeView />
     </>
   );
