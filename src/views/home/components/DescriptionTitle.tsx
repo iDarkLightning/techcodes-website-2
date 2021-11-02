@@ -5,15 +5,9 @@ interface DescriptionTitleProps {}
 
 const DescriptionTitle: React.FC<DescriptionTitleProps> = ({}) => {
   return (
-    <Center color="text" as={Stack} spacing={0} mb="8vh">
-      <Heading fontWeight="normal" fontSize="4vh">
-        We’re a student-led nonprofit
-      </Heading>
-      <Heading fontWeight="normal" fontSize="4vh">
-        aiming to increase computer
-      </Heading>
-      <Heading fontWeight="normal" fontSize="4vh">
-        science engagement.
+    <Center color="text" mb="8vh">
+      <Heading fontWeight="normal" fontSize="6vh" textAlign="center">
+        We’re a student-led nonprofit <br /> aiming to increase computer <br /> science engagement
       </Heading>
     </Center>
   );

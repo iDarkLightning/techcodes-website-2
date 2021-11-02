@@ -49,7 +49,6 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
           />
 
           <GlobalStyle />
-          <Nav />
           <AnimatePresence exitBeforeEnter>
             <motion.main
               key={location.pathname}

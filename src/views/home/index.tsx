@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Text, Image, HStack, Stack } from "@chakra-ui/react";
 import React from "react";
 import ContentWrapper from "./components/ContentWrapper";
 import DescriptionBody from "./components/DescriptionBody";
@@ -14,6 +14,17 @@ import WorkWrapper from "./components/WorkWrapper";
 import ReplitImage from "@images/sponsors/replit.svg";
 import GoDaddyImage from "@images/sponsors/godaddy.png";
 import OnePassword from "@images/sponsors/1Password.png";
+import StickerImage from "@images/sponsors/sticker.png";
+import PrincetonImage from "@images/sponsors/princetonreview.png";
+import LinodeImage from "@images/sponsors/linode.svg";
+import WolframImage from "@images/sponsors/wolfram.png";
+import EchoImage from "@images/sponsors/echoar.png";
+import LogoIcon from "@images/logo.svg";
+import GithubImage from "@images/socials/github.svg";
+import InstagramImage from "@images/socials/instagram.svg";
+import LinkedInImage from "@images/socials/linkedin.svg";
+import YoutubeImage from "@images/socials/youtube.svg";
+import { Nav } from "@components";
 
 interface HomeViewProps {}
 
@@ -21,6 +32,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
   return (
     <>
       <SectionWrapper>
+        <Nav />
         <ContentWrapper>
           <Title />
           <RocketImage />
@@ -28,8 +40,6 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
           <FolderImage />
           <CupImage />
         </ContentWrapper>
-      </SectionWrapper>
-      <SectionWrapper>
         <ContentWrapper>
           <DescriptionTitle />
           <DescriptionWrapper>
@@ -64,32 +74,62 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             </WorkWrapper>
           </DescriptionWrapper>
         </ContentWrapper>
+        <ContentWrapper h="57%">
+          <InitiativesSection />
+        </ContentWrapper>
+        <ContentWrapper>
+          <Flex flexDirection="column" w="100%" h="95vh" bgColor="gray">
+            <Stack as={Center} pt="8vh">
+              <Heading color="darkText" fontWeight="64" fontSize="7vh" textAlign="center">
+                We work with some <br /> pretty unique people
+              </Heading>
+              <Text color="darkText" textAlign="center" pt="3vh" fontWeight="19" fontSize="2vh">
+                Each year, major organizations will sponsor everything that CODE has <br /> to
+                offer. It is with their help that CODE can continue to bring computer <br />
+                science to those who need it most and strengthen their passion.
+              </Text>
+              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+                <Image src={ReplitImage} h="10vh" />
+                <Image src={GoDaddyImage} h="10vh" />
+                <Image src={OnePassword} h="10vh" />
+              </HStack>
+              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+                <Image src={StickerImage} h="10vh" />
+                <Image src={PrincetonImage} h="10vh" />
+                <Image src={LinodeImage} h="10vh" />
+              </HStack>
+              <HStack display="flex" width="60%" justifyContent="space-evenly" mb="3vh">
+                <Image src={WolframImage} h="10vh" />
+                <Image src={EchoImage} h="10vh" />
+              </HStack>
+            </Stack>
+          </Flex>
+          <Flex h="40vh" alignItems="center" justifyContent="space-evenly">
+            <Image src={LogoIcon} h="10vh" />
+            <Text>
+              <Box as="span" fontWeight="bold" fontSize="2vh">
+                Contact us
+              </Box>
+              <br />
+              <Box as="span" fontWeight="medium" fontSize="3vh" color="#A8A8A8">
+                team@techcodes.org
+              </Box>
+            </Text>
+            <Box>
+              <Text fontWeight="bold" fontSize="2vh">
+                Socials
+              </Text>
+              <HStack>
+                <Image src={InstagramImage} h="3vh" />
+                <Image src={LinkedInImage} h="3vh" />
+                <Image src={YoutubeImage} h="3vh" />
+                <Image src={GithubImage} h="3vh" />
+              </HStack>
+            </Box>
+          </Flex>
+          <Text color="gray">© 2021 TechCodes. 501(c)(3) nonprofit (EIN: 81-2908499)</Text>
+        </ContentWrapper>
       </SectionWrapper>
-      <InitiativesSection />
-      <Flex flexDirection="column" w="100%" h="95vh" bgColor="gray" justifyContent="space-between">
-        <Flex flexDirection="column" alignItems="center" justifyContent="center" pt="8vh">
-          <Heading color="darkText" fontWeight="64" fontSize="7vh" textAlign="center">
-            We work with some <br /> pretty unique people
-          </Heading>
-          <Text color="darkText" textAlign="center" pt="3vh" fontWeight="19" fontSize="2vh">
-            Each year, major organizations will sponsor everything that CODE has <br /> to offer. It
-            is with their help that CODE can continue to bring computer <br />
-            science to those who need it most and strengthen their passion.
-          </Text>
-        </Flex>
-        <Box
-          w="90%"
-          m="auto"
-          h="30vh"
-          bgColor="lightBlue"
-          position="absolute"
-          mr="auto"
-          ml="auto"
-          left="0"
-          right="0"
-          textAlign="center"></Box>
-        <Box h=""></Box>
-      </Flex>
     </>
   );
 };

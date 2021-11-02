@@ -4,7 +4,7 @@ import React from "react";
 interface TitleProps {}
 
 const TitleLine: React.FC = ({ children }) => (
-  <Heading fontSize="12vh" fontWeight="500" lineHeight="95%" textAlign="center">
+  <Heading fontSize="14vh" fontWeight="500" lineHeight="95%" textAlign="center">
     {children}
   </Heading>
 );

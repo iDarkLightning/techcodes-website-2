@@ -1,14 +1,16 @@
-import { Box, Button, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import { InitiativesSwiper } from "./InitiativesSwiper";
 
 interface InitiativesSectionProps {}
 
 const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
+  const height = useBreakpointValue({ lg: "65vh", md: "65%" });
+
   return (
     <Box
       w="100%"
-      h="65%"
+      h={height}
       bgColor="lightBlue"
       mt="2vh"
       pb="2vh"
