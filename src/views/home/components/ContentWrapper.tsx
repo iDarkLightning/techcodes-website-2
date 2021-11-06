@@ -4,13 +4,14 @@ import React from "react";
 
 interface ContentWrapperProps {
   h?: string;
+  mt?: string;
 }
 
-const ContentWrapper: React.FC<ContentWrapperProps> = ({ h, children }) => {
-  const height = useBreakpointValue({ lg: h || "100%", md: undefined });
+const ContentWrapper: React.FC<ContentWrapperProps> = ({ h, mt, children }) => {
+  // const height = useBreakpointValue({ lg: h || "100%", md: undefined });
 
   return (
-    <Box mt="8vh" h={height}>
+    <Box mt={mt} h={h || "100vh"}>
       {children}
     </Box>
   );

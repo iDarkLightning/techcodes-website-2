@@ -25,6 +25,7 @@ import InstagramImage from "@images/socials/instagram.svg";
 import LinkedInImage from "@images/socials/linkedin.svg";
 import YoutubeImage from "@images/socials/youtube.svg";
 import { Nav } from "@components";
+import Hero from "./components/Hero";
 
 interface HomeViewProps {}
 
@@ -33,12 +34,8 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
     <>
       <SectionWrapper>
         <Nav />
-        <ContentWrapper>
-          <Title />
-          <RocketImage />
-          <PotionImage />
-          <FolderImage />
-          <CupImage />
+        <ContentWrapper h="100vh" mt="8vh">
+          <Hero />
         </ContentWrapper>
         <ContentWrapper>
           <DescriptionTitle />
