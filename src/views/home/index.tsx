@@ -26,6 +26,8 @@ import LinkedInImage from "@images/socials/linkedin.svg";
 import YoutubeImage from "@images/socials/youtube.svg";
 import { Nav } from "@components";
 import Hero from "./components/Hero";
+import Stripes from "./components/Stripes";
+import CTA from "./components/CTA";
 
 interface HomeViewProps {}
 
@@ -71,11 +73,19 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             </WorkWrapper>
           </DescriptionWrapper>
         </ContentWrapper>
+        <Stripes />
         <ContentWrapper h="57%">
           <InitiativesSection />
         </ContentWrapper>
+
         <ContentWrapper>
-          <Flex flexDirection="column" w="100%" h="95vh" bgColor="gray">
+          <Flex
+            flexDirection="column"
+            w="100%"
+            h="95vh"
+            bgColor="gray"
+            position="relative"
+            zIndex="-2">
             <Stack as={Center} pt="8vh">
               <Heading color="darkText" fontWeight="64" fontSize="7vh" textAlign="center">
                 We work with some <br /> pretty unique people
@@ -101,6 +111,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
               </HStack>
             </Stack>
           </Flex>
+          <CTA mt="-10vh" />
           <Flex h="40vh" alignItems="center" justifyContent="space-evenly">
             <Image src={LogoIcon} h="10vh" />
             <Text>

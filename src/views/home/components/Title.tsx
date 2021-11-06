@@ -18,18 +18,24 @@ const TitleLine: React.FC = ({ children }) => {
 const JoinButton: React.FC = () => (
   <Flex
     alignItems="center"
-    justifyContent="space-evenly"
+    justifyContent="space-around"
     bgGradient="linear-gradient(90deg, #c766ff 0%, #ff8b66 100%)"
     borderRadius="41px"
-    w="40vh"
-    h="6vh"
+    w="28.472vw"
+    h="3.75vw"
     fontWeight="500"
     textTransform="none"
-    fontSize="2vh">
+    fontSize="1.25vw">
     <Text color="background">Join us for another year</Text>
     <Link href="https://bit.ly/techcodes">
-      <Button bgColor="background" borderRadius="35px">
-        Sign up now
+      <Button
+        bgColor="background"
+        borderRadius="41px"
+        width="11.806vw"
+        height="2.778vw"
+        fontSize="1.5vw"
+        fontWeight="500">
+        <Text color="text">Sign up now</Text>
       </Button>
     </Link>
   </Flex>

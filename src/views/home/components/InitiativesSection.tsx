@@ -8,14 +8,7 @@ const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
   const height = useBreakpointValue({ lg: "65vh", md: "65%" });
 
   return (
-    <Box
-      w="100%"
-      h={height}
-      bgColor="lightBlue"
-      mt="2vh"
-      pb="2vh"
-      borderTop="0.5vh solid #161616"
-      borderBottom="0.5vh solid #161616">
+    <Box w="100%" h={height} bgColor="lightBlue" mt="2vh" pb="2vh" zIndex="1">
       <Box pt="2vh">
         <Flex w="80%" m="auto" justifyContent="space-between" alignItems="center" pb="2vh">
           <Heading fontWeight="64" fontSize="3vw">

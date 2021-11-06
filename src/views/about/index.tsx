@@ -27,6 +27,7 @@ import GithubImage from "@images/socials/github.svg";
 import InstagramImage from "@images/socials/instagram.svg";
 import LinkedInImage from "@images/socials/linkedin.svg";
 import YoutubeImage from "@images/socials/youtube.svg";
+import CTA from "../home/components/CTA";
 
 const AboutView: React.FC<{ team: Member[] }> = ({ team }) => {
   return (
@@ -94,18 +95,7 @@ const AboutView: React.FC<{ team: Member[] }> = ({ team }) => {
         </Grid>
       </ContentWrapper>
       <ContentWrapper h="50vh">
-        <Flex w="80%" m="auto" h="60%" bgColor="lightBlue" justifyContent="space-between">
-          <Stack w="50%" ml="2vw" pt="2vw">
-            <Text fontWeight="medium" fontSize="2vw" lineHeight="10" mb="2vw">
-              Changing the world through <br /> computer science isn't easy. <br /> Explore how we
-              manage to do it.
-            </Text>
-            <Button bgColor="pink" color="background" borderRadius="41px" w="30%">
-              All initiatives
-            </Button>
-          </Stack>
-          <Image src={SearchingImage} w="30vh" h="30vh" />
-        </Flex>
+        <CTA />
         <Flex h="30vh" alignItems="center" justifyContent="space-between" w="70%" m="auto">
           <Image src={LogoIcon} h="8vh" />
           <Text>

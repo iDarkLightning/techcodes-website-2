@@ -17,7 +17,7 @@ const Nav: React.FC<NavProps> = ({}) => {
       <Flex />
       <Center>
         <GatsbyLink to="/">
-          <Image src={LogoIcon} h="100%" />
+          <Image src={LogoIcon} h="100%" marginTop="10px" />
         </GatsbyLink>
       </Center>
       <Flex>
@@ -27,7 +27,8 @@ const Nav: React.FC<NavProps> = ({}) => {
           // w="4vw"
           // h="3vw"
           cursor="pointer"
-          onClick={onToggle}>
+          onClick={onToggle}
+          marginTop="-10px">
           <Center h="100%" color={isOpen ? "text" : "#161616"}>
             <StylableHamburger toggled={isOpen} direction="left" size={28} />
           </Center>
