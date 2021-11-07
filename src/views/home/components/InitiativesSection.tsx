@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Text, Flex, Heading, useBreakpointValue, Link } from "@chakra-ui/react";
 import React from "react";
 import { InitiativesSwiper } from "./InitiativesSwiper";
 
@@ -14,9 +14,16 @@ const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
           <Heading fontWeight="64" fontSize="3vw">
             Our events
           </Heading>
-          <Button bgColor="pink" color="background" borderRadius="41px">
+          <Link
+            href="/initiatives"
+            bgColor="pink"
+            color="background"
+            borderRadius="41px"
+            fontSize="1vw"
+            textDecoration="none !important"
+            padding="8px 14px">
             All initiatives
-          </Button>
+          </Link>
         </Flex>
         <Box overflow="hidden">
           <Box ml="5vw">
