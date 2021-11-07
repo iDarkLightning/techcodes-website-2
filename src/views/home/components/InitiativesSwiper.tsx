@@ -15,10 +15,10 @@ export const StylableSwiper = chakra(Swiper);
 export const Slide: React.FC<SlideProps> = ({ url, name, date }) => (
   <Box>
     <Image src={url} w="34vw" h="20vw" border="0.2vw solid yellow" />
-    <Text fontWeight="medium" fontSize="1.2vw">
+    <Text fontWeight="medium" fontSize={{ base: "2vw", md: "1.2vw" }}>
       {name}
     </Text>
-    <Text fontWeight="medium" fontSize="0.8vw">
+    <Text fontWeight="medium" fontSize="0.8vw" display={{ base: "none", md: "flex" }}>
       {date}
     </Text>
   </Box>

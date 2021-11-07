@@ -13,9 +13,9 @@ const Stripe: React.FC<StripesProps> = ({ h, col }) => {
 const Stripes: React.FC = () => {
   return (
     <Box width="100vw" transform="rotate(35deg)" position="absolute" zIndex="-1" left="-13.71vw">
-      <Stripe col="#7087FE" />
-      <Stripe col="#FF8FE6" />
-      <Stripe h="8vw" col="#FFCC66" />
+      <Stripe col="blueText" />
+      <Stripe col="pink" />
+      <Stripe h="8vw" col="yellow" />
     </Box>
   );
 };

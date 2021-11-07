@@ -12,9 +12,18 @@ interface TitleImageProps {
   transform?: string;
   right?: ResponsiveValue<string>;
   left?: ResponsiveValue<string>;
+  display?: object;
 }
 
-const TitleImage = ({ src, width, transform, top, right, left }: TitleImageProps) => {
+const TitleImage = ({
+  src,
+  width,
+  transform,
+  top,
+  right,
+  left,
+  display = { base: "none", "2xl": "flex" },
+}: TitleImageProps) => {
   return (
     <Box
       position="absolute"
@@ -23,7 +32,7 @@ const TitleImage = ({ src, width, transform, top, right, left }: TitleImageProps
       top={top}
       right={right}
       left={left}
-      display={{ md: "none", "2xl": "flex" }}>
+      display={display}>
       <Image src={src} />
     </Box>
   );
@@ -79,3 +88,40 @@ export const FolderImage: React.FC = () => {
 export const CupImage: React.FC = () => (
   <TitleImage src={CupPng} width="30vmin" top="57%" left="70%" />
 );
+
+export const SecondRocketImage: React.FC = () => {
+  return (
+    <TitleImage
+      src={RocketPng}
+      width="35vh"
+      transform="rotate(-10deg)"
+      top="70%"
+      right={{ base: "5%", sm: "-15%", md: "5%" }}
+      display={{ base: "flex", "2xl": "none" }}
+    />
+  );
+};
+export const SecondCupImage: React.FC = () => {
+  return (
+    <TitleImage
+      src={CupPng}
+      width="35vh"
+      transform="rotate(-20deg)"
+      top="75%"
+      right={{ base: "50%", md: "30%" }}
+      display={{ base: "none", md: "flex", "2xl": "none" }}
+    />
+  );
+};
+export const SecondFolderImage: React.FC = () => {
+  return (
+    <TitleImage
+      src={FolderPng}
+      width="35vh"
+      transform="rotate(-8deg)"
+      top="75%"
+      left={{ base: "10%", sm: "-5%", md: "10%" }}
+      display={{ base: "none", sm: "flex", "2xl": "none" }}
+    />
+  );
+};

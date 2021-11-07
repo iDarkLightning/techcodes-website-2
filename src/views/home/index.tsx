@@ -28,6 +28,7 @@ import { Nav } from "@components";
 import Hero from "./components/Hero";
 import Stripes from "./components/Stripes";
 import CTA from "./components/CTA";
+import SponsorImage from "./components/SponsorImage";
 
 interface HomeViewProps {}
 
@@ -50,7 +51,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             </DescriptionBody>
             <WorkWrapper>
               <>
-                <WorkHeading color="yellow">Hosting events</WorkHeading>
+                <WorkHeading color="blueText">Hosting events</WorkHeading>
                 <WorkBody>
                   We have hosted and continue to host events like hackathons and guest panels to
                   help inspire computer science education in today’s youth.
@@ -64,7 +65,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
                 </WorkBody>
               </>
               <>
-                <WorkHeading color="blueText">Building experiences</WorkHeading>
+                <WorkHeading color="yellow">Building experiences</WorkHeading>
                 <WorkBody>
                   We have hosted and continue to host events like hackathons and guest panels to
                   help inspire computer science education in today’s youth.
@@ -75,7 +76,9 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
         </ContentWrapper>
         <Stripes />
         <ContentWrapper h="57%">
-          <InitiativesSection />
+          <Box w="100%" h="100%" position="relative">
+            <InitiativesSection />
+          </Box>
         </ContentWrapper>
 
         <ContentWrapper>
@@ -96,24 +99,24 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
                 science to those who need it most and strengthen their passion.
               </Text>
               <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
-                <Image src={ReplitImage} h="10vh" />
-                <Image src={GoDaddyImage} h="10vh" />
-                <Image src={OnePassword} h="10vh" />
+                <SponsorImage src={ReplitImage} />
+                <SponsorImage src={GoDaddyImage} />
+                <SponsorImage src={OnePassword} />
               </HStack>
               <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
-                <Image src={StickerImage} h="10vh" />
-                <Image src={PrincetonImage} h="10vh" />
-                <Image src={LinodeImage} h="10vh" />
+                <SponsorImage src={StickerImage} />
+                <SponsorImage src={PrincetonImage} />
+                <SponsorImage src={LinodeImage} />
               </HStack>
               <HStack display="flex" width="60%" justifyContent="space-evenly" pb="3vh">
-                <Image src={WolframImage} h="10vh" />
-                <Image src={EchoImage} h="10vh" />
+                <SponsorImage src={WolframImage} />
+                <SponsorImage src={EchoImage} />
               </HStack>
             </Stack>
           </Flex>
           <CTA mt="-10vh" />
           <Flex h="40vh" alignItems="center" justifyContent="space-evenly">
-            <Image src={LogoIcon} h="10vh" />
+            <Image src={LogoIcon} h={{ base: "6vh", md: "10vh" }} />
             <Text>
               <Box as="span" fontWeight="bold" fontSize="2vh">
                 Contact us

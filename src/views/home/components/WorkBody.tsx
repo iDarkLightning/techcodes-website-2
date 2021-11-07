@@ -1,11 +1,17 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
 
-interface WorkBodyProps {}
+interface WorkBodyProps {
+  always?: boolean;
+}
 
-const WorkBody: React.FC<WorkBodyProps> = ({ children }) => {
+const WorkBody: React.FC<WorkBodyProps> = ({ children, always }) => {
   return (
-    <Text maxW="30vw" flex="2" fontSize="2vh">
+    <Text
+      maxW="40vw"
+      flex="2"
+      fontSize="2vh"
+      display={/*always ? "flex" : { base: "none", md: "flex" }*/ "flex"}>
       {children}
     </Text>
   );

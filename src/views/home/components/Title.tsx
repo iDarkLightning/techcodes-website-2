@@ -6,7 +6,7 @@ interface TitleProps {}
 const TitleLine: React.FC = ({ children }) => {
   return (
     <Heading
-      fontSize={{ xs: "2rem", sm: "4rem", md: "6rem", lg: "8rem" }}
+      fontSize={{ base: "2.5rem", sm: "3.75rem", md: "5rem", lg: "6rem" }}
       fontWeight="500"
       lineHeight="95%"
       textAlign="center">
@@ -21,19 +21,20 @@ const JoinButton: React.FC = () => (
     justifyContent="space-around"
     bgGradient="linear-gradient(90deg, #c766ff 0%, #ff8b66 100%)"
     borderRadius="41px"
-    w="28.472vw"
-    h="3.75vw"
+    width={{ base: "318px", md: "425px" }}
+    height={{ base: "37px", md: "50px" }}
     fontWeight="500"
     textTransform="none"
-    fontSize="1.25vw">
+    fontSize={{ base: "13.5px", md: "18px" }}
+    marginTop="10px !important">
     <Text color="background">Join us for another year</Text>
     <Link href="https://bit.ly/techcodes">
       <Button
         bgColor="background"
         borderRadius="41px"
-        width="11.806vw"
-        height="2.778vw"
-        fontSize="1.5vw"
+        width={{ base: "97px", md: "170px" }}
+        height={{ base: "30px", md: "40px" }}
+        fontSize={{ base: "12px", md: "16px" }}
         fontWeight="500">
         <Text color="text">Sign up now</Text>
       </Button>

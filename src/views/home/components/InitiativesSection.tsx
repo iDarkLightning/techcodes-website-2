@@ -5,10 +5,10 @@ import { InitiativesSwiper } from "./InitiativesSwiper";
 interface InitiativesSectionProps {}
 
 const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
-  const height = useBreakpointValue({ lg: "65vh", md: "65%" });
+  const height = useBreakpointValue({ lg: "65%", md: "65%" });
 
   return (
-    <Box w="100%" h={height} bgColor="lightBlue" mt="2vh" pb="2vh" zIndex="1">
+    <Box w="100%" h={height} bgColor="lightBlue" pb="2vh" position="absolute" zIndex="1" bottom="0">
       <Box pt="2vh">
         <Flex w="80%" m="auto" justifyContent="space-between" alignItems="center" pb="2vh">
           <Heading fontWeight="64" fontSize="3vw">
@@ -19,7 +19,7 @@ const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
           </Button>
         </Flex>
         <Box overflow="hidden">
-          <Box ml="10vw">
+          <Box ml="5vw">
             <InitiativesSwiper />
           </Box>
         </Box>
