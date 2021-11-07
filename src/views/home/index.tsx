@@ -19,16 +19,12 @@ import PrincetonImage from "@images/sponsors/princetonreview.png";
 import LinodeImage from "@images/sponsors/linode.svg";
 import WolframImage from "@images/sponsors/wolfram.png";
 import EchoImage from "@images/sponsors/echoar.png";
-import LogoIcon from "@images/logo.svg";
-import GithubImage from "@images/socials/github.svg";
-import InstagramImage from "@images/socials/instagram.svg";
-import LinkedInImage from "@images/socials/linkedin.svg";
-import YoutubeImage from "@images/socials/youtube.svg";
 import { Nav } from "@components";
 import Hero from "./components/Hero";
 import Stripes from "./components/Stripes";
 import CTA from "./components/CTA";
 import SponsorImage from "./components/SponsorImage";
+import Footer from "@components/footer";
 
 interface HomeViewProps {}
 
@@ -115,29 +111,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             </Stack>
           </Flex>
           <CTA mt="-10vh" />
-          <Flex h="40vh" alignItems="center" justifyContent="space-evenly">
-            <Image src={LogoIcon} h={{ base: "6vh", md: "10vh" }} />
-            <Text>
-              <Box as="span" fontWeight="bold" fontSize="2vh">
-                Contact us
-              </Box>
-              <br />
-              <Box as="span" fontWeight="medium" fontSize="3vh" color="#A8A8A8">
-                team@techcodes.org
-              </Box>
-            </Text>
-            <Box>
-              <Text fontWeight="bold" fontSize="2vh">
-                Socials
-              </Text>
-              <HStack>
-                <Image src={InstagramImage} h="3vh" />
-                <Image src={LinkedInImage} h="3vh" />
-                <Image src={YoutubeImage} h="3vh" />
-                <Image src={GithubImage} h="3vh" />
-              </HStack>
-            </Box>
-          </Flex>
+          <Footer />
           <Text color="gray">© 2021 TechCodes. 501(c)(3) nonprofit (EIN: 81-2908499)</Text>
         </ContentWrapper>
       </SectionWrapper>
