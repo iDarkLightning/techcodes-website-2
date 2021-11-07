@@ -13,7 +13,7 @@ interface SlideProps {
 export const StylableSwiper = chakra(Swiper);
 
 export const Slide: React.FC<SlideProps> = ({ url, name, date }) => (
-  <Box>
+  <Box hover={{ width: "10px" }}>
     <Image src={url} w="34vw" h="20vw" border="0.2vw solid yellow" />
     <Text fontWeight="medium" fontSize={{ base: "2vw", md: "1.2vw" }}>
       {name}

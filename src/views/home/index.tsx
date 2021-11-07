@@ -70,7 +70,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             </WorkWrapper>
           </DescriptionWrapper>
         </ContentWrapper>
-        <Stripes />
+
         <ContentWrapper h="57%">
           <Box w="100%" h="100%" position="relative">
             <InitiativesSection />
@@ -85,7 +85,8 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
             bgColor="gray"
             position="relative"
             zIndex="-2">
-            <Stack as={Center} pt="8vh">
+            <Stripes />
+            <Stack as={Center} pt="8vh" position="relative" zIndex="10">
               <Heading color="darkText" fontWeight="64" fontSize="7vh" textAlign="center">
                 We work with some <br /> pretty unique people
               </Heading>
