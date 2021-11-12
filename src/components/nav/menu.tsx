@@ -80,7 +80,7 @@ const Menu: React.FC<MenuProps> = ({ open }) => {
                     y: "-100%",
                     transition: { delay: 0.3, ease: [0.7, 0, 0.07, 1], duration: 1 },
                   }}>
-                  <StyledLink to="/initiaitives">Initiatives.</StyledLink>
+                  <StyledLink to="/initiatives">Initiatives.</StyledLink>
                 </MotionBox>
               </Box>
               <Box overflow="hidden">

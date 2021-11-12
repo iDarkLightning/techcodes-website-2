@@ -11,7 +11,12 @@ export const InitiativesSwiper: React.FC = () => (
   <StylableSwiper slidesPerView={2.5} spaceBetween={10} overflow="visible">
     {[1, 2, 3, 4, 5].map(() => (
       <SwiperSlide>
-        <Thumbnail url={IMAGE_URL} name="CodeFest" date={new Date().toLocaleDateString()} />
+        <Thumbnail
+          url={IMAGE_URL}
+          name="CodeFest"
+          date={new Date().toLocaleDateString()}
+          homePage
+        />
       </SwiperSlide>
     ))}
   </StylableSwiper>
