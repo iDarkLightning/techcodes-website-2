@@ -5,10 +5,12 @@ import SectionWrapper from "../home/components/SectionWrapper";
 import Thumbnail from "../home/components/InitiativeThumbnail";
 import { Heading, SimpleGrid, Flex } from "@chakra-ui/react";
 
-interface InitiativesViewProps {}
+interface InitiativesViewProps {
+  data: any;
+}
 const IMAGE_URL = "https://www.datocms-assets.com/50019/1624285424-codefest.png?auto=format&w=1920";
 
-const InitiativesView: React.FC<InitiativesViewProps> = ({}) => {
+const InitiativesView: React.FC<InitiativesViewProps> = ({ data }) => {
   return (
     <SectionWrapper>
       <Nav />
@@ -22,8 +24,12 @@ const InitiativesView: React.FC<InitiativesViewProps> = ({}) => {
           Initiatives
         </Heading>
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2.5vw" w="90vw">
-          {[1, 2, 3, 4, 5].map(() => (
-            <Thumbnail url={IMAGE_URL} name="CodeFest" date={new Date().toLocaleDateString()} />
+          {data.map((content: any, index: number) => (
+            <Thumbnail
+              url={content.thumbnail.url}
+              name={content.title}
+              date={new Date().toLocaleDateString()}
+            />
           ))}
         </SimpleGrid>
       </Flex>
