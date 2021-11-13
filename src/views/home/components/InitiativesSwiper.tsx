@@ -7,15 +7,15 @@ const IMAGE_URL = "https://www.datocms-assets.com/50019/1624285424-codefest.png?
 
 export const StylableSwiper = chakra(Swiper);
 
-export const InitiativesSwiper: React.FC = () => (
-  <StylableSwiper slidesPerView={2.5} spaceBetween={10} overflow="visible">
-    {[1, 2, 3, 4, 5].map(() => (
+export const InitiativesSwiper: React.FC<{ data: any }> = ({ data }) => (
+  <StylableSwiper slidesPerView={2} spaceBetween={10} overflow="visible">
+    {data.map((content: any) => (
       <SwiperSlide>
         <Thumbnail
-          url={IMAGE_URL}
-          name="CodeFest"
+          href={content.slug}
+          url={content.thumbnail.url}
+          name={content.title}
           date={new Date().toLocaleDateString()}
-          homePage
         />
       </SwiperSlide>
     ))}

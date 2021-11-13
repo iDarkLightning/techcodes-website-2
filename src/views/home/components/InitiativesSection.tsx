@@ -2,9 +2,11 @@ import { Box, Text, Flex, Heading, useBreakpointValue, Link } from "@chakra-ui/r
 import React from "react";
 import { InitiativesSwiper } from "./InitiativesSwiper";
 
-interface InitiativesSectionProps {}
+interface InitiativesSectionProps {
+  data: any;
+}
 
-const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
+const InitiativesSection: React.FC<InitiativesSectionProps> = ({ data }) => {
   const height = useBreakpointValue({ lg: "65%", md: "65%" });
 
   return (
@@ -27,7 +29,7 @@ const InitiativesSection: React.FC<InitiativesSectionProps> = ({}) => {
         </Flex>
         <Box overflow="hidden">
           <Box ml="5vw">
-            <InitiativesSwiper />
+            <InitiativesSwiper data={data} />
           </Box>
         </Box>
       </Box>

@@ -23,9 +23,11 @@ import WorkBody from "./components/WorkBody";
 import WorkHeading from "./components/WorkHeading";
 import WorkWrapper from "./components/WorkWrapper";
 
-interface HomeViewProps {}
+interface HomeViewProps {
+  data: any;
+}
 
-const HomeView: React.FC<HomeViewProps> = ({}) => {
+const HomeView: React.FC<HomeViewProps> = ({ data }) => {
   return (
     <>
       <SectionWrapper>
@@ -70,7 +72,7 @@ const HomeView: React.FC<HomeViewProps> = ({}) => {
 
         <ContentWrapper>
           <Box w="100%" h="100%" position="relative">
-            <InitiativesSection />
+            <InitiativesSection data={data} />
           </Box>
         </ContentWrapper>
 
