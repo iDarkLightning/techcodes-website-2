@@ -1,16 +1,13 @@
-import { HStack, Flex, Stack, useBreakpointValue, VStack } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
 
 const DescriptionWrapper: React.FC = ({ children }) => {
-  const direction = useBreakpointValue({ base: "row", md: "column" });
-
   return (
     <Stack
-      w="90vw"
+      w="90%"
       m="auto"
-      spacing="8vw"
+      spacing="6vw"
       as={Flex}
-      // alignItems="flex-start"
       overflow="hidden"
       direction={{ base: "column", md: "row" }}>
       {children}

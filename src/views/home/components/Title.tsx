@@ -25,7 +25,7 @@ const JoinButton: React.FC = () => (
     height={{ base: "37px", md: "50px" }}
     fontWeight="500"
     textTransform="none"
-    fontSize={{ base: "13.5px", md: "18px" }}
+    fontSize={{ base: "0.8rem", md: "1.2rem" }}
     marginTop="10px !important">
     <Text color="background">Join us for another year</Text>
     <Link href="https://bit.ly/techcodes">

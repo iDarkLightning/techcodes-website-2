@@ -5,7 +5,7 @@ interface DescriptionBodyProps {}
 
 const DescriptionBody: React.FC<DescriptionBodyProps> = ({ children }) => {
   return (
-    <Text flex="2" fontSize="2vh">
+    <Text flex="2" fontSize="1.2rem">
       {children}
     </Text>
   );

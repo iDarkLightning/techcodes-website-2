@@ -24,8 +24,6 @@ const Nav: React.FC<NavProps> = ({}) => {
         <Box
           zIndex="9999"
           bgColor={isOpen ? "none" : "#e7e7e7"}
-          // w="4vw"
-          // h="3vw"
           cursor="pointer"
           onClick={onToggle}
           marginTop="-10px">

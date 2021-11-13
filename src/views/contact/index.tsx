@@ -1,8 +1,6 @@
+import { Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Footer, Nav, SectionWrapper } from "@components";
 import React from "react";
-import Footer from "@components/footer";
-import { Nav } from "@components";
-import SectionWrapper from "../home/components/SectionWrapper";
-import { Heading, Link, Text, Center, Flex } from "@chakra-ui/react";
 
 interface ContactViewProps {}
 

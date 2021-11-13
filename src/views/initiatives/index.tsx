@@ -1,7 +1,6 @@
 import React from "react";
 import { Footer } from "@components";
-import { Nav } from "@components";
-import SectionWrapper from "../home/components/SectionWrapper";
+import { Nav, SectionWrapper } from "@components";
 import Thumbnail from "../home/components/InitiativeThumbnail";
 import { Heading, SimpleGrid, Flex } from "@chakra-ui/react";
 
@@ -23,7 +22,7 @@ const InitiativesView: React.FC<InitiativesViewProps> = ({ data }) => {
           Initiatives
         </Heading>
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2.5vw" w="90vw">
-          {data.map((content: any, index: number) => (
+          {data.map((content: any) => (
             <Thumbnail
               href={content.slug}
               url={content.thumbnail.url}

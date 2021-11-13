@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import { Footer, Nav } from "@components";
+import { Footer, Nav, SectionWrapper } from "@components";
 import OnePassword from "@images/sponsors/1Password.png";
 import EchoImage from "@images/sponsors/echoar.png";
 import GoDaddyImage from "@images/sponsors/godaddy.png";
@@ -8,15 +8,14 @@ import PrincetonImage from "@images/sponsors/princetonreview.png";
 import ReplitImage from "@images/sponsors/replit.svg";
 import StickerImage from "@images/sponsors/sticker.png";
 import WolframImage from "@images/sponsors/wolfram.png";
-import React from "react";
+import React, { useRef } from "react";
 import ContentWrapper from "./components/ContentWrapper";
-import CTA from "./components/CTA";
+import { CTA } from "@components";
 import DescriptionBody from "./components/DescriptionBody";
 import DescriptionTitle from "./components/DescriptionTitle";
 import DescriptionWrapper from "./components/DescriptionWrapper";
 import Hero from "./components/Hero";
 import InitiativesSection from "./components/InitiativesSection";
-import SectionWrapper from "./components/SectionWrapper";
 import SponsorImage from "./components/SponsorImage";
 import Stripes from "./components/Stripes";
 import WorkBody from "./components/WorkBody";
@@ -28,46 +27,50 @@ interface HomeViewProps {
 }
 
 const HomeView: React.FC<HomeViewProps> = ({ data }) => {
+  const descriptionRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <SectionWrapper>
         <Nav />
-        <ContentWrapper h="100vh" mt="8vh">
+        <ContentWrapper h="100%" mt="2rem">
           <Hero />
         </ContentWrapper>
         <ContentWrapper h="45%">
-          <DescriptionTitle />
-          <DescriptionWrapper>
-            <DescriptionBody>
-              TechCodes is dedicated to fostering computer science education to students of all
-              backgrounds and expose them to the creativity and innovation technology brings.
-              TechCodes is dedicated to fostering computer science education to students of all
-              backgrounds and expose them to the creativity and innovation technology brings.
-            </DescriptionBody>
-            <WorkWrapper>
-              <>
-                <WorkHeading color="blueText">Hosting events</WorkHeading>
-                <WorkBody>
-                  We have hosted and continue to host events like hackathons and guest panels to
-                  help inspire computer science education in today’s youth.
-                </WorkBody>
-              </>
-              <>
-                <WorkHeading color="pink">Creating connections</WorkHeading>
-                <WorkBody>
-                  We have hosted and continue to host events like hackathons and guest panels to
-                  help inspire computer science education in today’s youth.
-                </WorkBody>
-              </>
-              <>
-                <WorkHeading color="yellow">Building experiences</WorkHeading>
-                <WorkBody>
-                  We have hosted and continue to host events like hackathons and guest panels to
-                  help inspire computer science education in today’s youth.
-                </WorkBody>
-              </>
-            </WorkWrapper>
-          </DescriptionWrapper>
+          <Box ref={descriptionRef}>
+            <DescriptionTitle />
+            <DescriptionWrapper>
+              <DescriptionBody>
+                TechCodes is dedicated to fostering computer science education to students of all
+                backgrounds and expose them to the creativity and innovation technology brings.
+                TechCodes is dedicated to fostering computer science education to students of all
+                backgrounds and expose them to the creativity and innovation technology brings.
+              </DescriptionBody>
+              <WorkWrapper>
+                <>
+                  <WorkHeading color="blueText">Hosting events</WorkHeading>
+                  <WorkBody>
+                    We have hosted and continue to host events like hackathons and guest panels to
+                    help inspire computer science education in today’s youth.
+                  </WorkBody>
+                </>
+                <>
+                  <WorkHeading color="pink">Creating connections</WorkHeading>
+                  <WorkBody>
+                    We have hosted and continue to host events like hackathons and guest panels to
+                    help inspire computer science education in today’s youth.
+                  </WorkBody>
+                </>
+                <>
+                  <WorkHeading color="yellow">Building experiences</WorkHeading>
+                  <WorkBody>
+                    We have hosted and continue to host events like hackathons and guest panels to
+                    help inspire computer science education in today’s youth.
+                  </WorkBody>
+                </>
+              </WorkWrapper>
+            </DescriptionWrapper>
+          </Box>
         </ContentWrapper>
 
         <ContentWrapper>
@@ -84,7 +87,7 @@ const HomeView: React.FC<HomeViewProps> = ({ data }) => {
             bgColor="gray"
             position="relative"
             zIndex="-2">
-            <Box visibility={{ base: "hidden", lg: "visible" }}>
+            <Box visibility={{ base: "hidden", xl: "visible" }}>
               <Stripes />
             </Box>
             <Stack as={Center} pt="8vh" position="relative" zIndex="10">
@@ -140,7 +143,6 @@ const HomeView: React.FC<HomeViewProps> = ({ data }) => {
           </Flex>
           <CTA mt="-2vh" />
           <Footer />
-          {/* <Text color="gray">© 2021 TechCodes. 501(c)(3) nonprofit (EIN: 81-2908499)</Text> */}
         </ContentWrapper>
       </SectionWrapper>
     </>

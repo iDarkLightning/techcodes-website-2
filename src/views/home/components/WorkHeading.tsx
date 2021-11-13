@@ -7,7 +7,7 @@ interface WorkHeadingProps {
 
 const WorkHeading: React.FC<WorkHeadingProps> = ({ color, children }) => {
   return (
-    <Heading color={color} fontWeight="500" fontSize={{ base: "4vh", md: "6vh" }}>
+    <Heading color={color} fontWeight="500" fontSize={{ base: "2.2rem", md: "3rem" }}>
       {children}
     </Heading>
   );

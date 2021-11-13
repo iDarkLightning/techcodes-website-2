@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "@components";
 import { Nav } from "@components";
-import SectionWrapper from "../home/components/SectionWrapper";
+import SectionWrapper from "../../components/SectionWrapper";
 import { Heading, Text, Flex, Image, Box, Link } from "@chakra-ui/react";
 
 const IMAGE_URL = "https://www.datocms-assets.com/50019/1624285424-codefest.png?auto=format&w=1920";
