@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "@components/footer";
+import { Footer } from "@components";
 import { Nav } from "@components";
 import SectionWrapper from "../home/components/SectionWrapper";
 import { Heading, Flex, Box, Text, Link } from "@chakra-ui/react";

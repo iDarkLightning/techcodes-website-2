@@ -8,7 +8,6 @@ interface WorkBodyProps {
 const WorkBody: React.FC<WorkBodyProps> = ({ children, always }) => {
   return (
     <Text
-      maxW="40vw"
       flex="2"
       fontSize="2vh"
       display={/*always ? "flex" : { base: "none", md: "flex" }*/ "flex"}>

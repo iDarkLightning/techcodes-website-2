@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "@components/footer";
+import { Footer } from "@components";
 import { Nav } from "@components";
 import SectionWrapper from "../home/components/SectionWrapper";
 import Thumbnail from "../home/components/InitiativeThumbnail";

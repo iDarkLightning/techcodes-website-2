@@ -6,7 +6,10 @@ interface SponsorImageProps {
   h?: string;
 }
 
-const SponsorImage: React.FC<SponsorImageProps> = ({ src, h = { base: "7vh", md: "10vh" } }) => {
+const SponsorImage: React.FC<SponsorImageProps> = ({
+  src,
+  h = { base: undefined, md: "7vh", lg: "10vh" },
+}) => {
   return <Image src={src} h={h} />;
 };
 

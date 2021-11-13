@@ -1,4 +1,4 @@
-import { Center, Stack, Heading } from "@chakra-ui/react";
+import { Center, Heading } from "@chakra-ui/react";
 import React from "react";
 
 interface DescriptionTitleProps {}
@@ -10,7 +10,7 @@ const DescriptionTitle: React.FC<DescriptionTitleProps> = ({}) => {
         fontWeight="normal"
         fontSize={{ base: "4vh", sm: "5.5vh", md: "8vh" }}
         textAlign="center">
-        We’re a student-led nonprofit <br /> aiming to increase computer <br /> science engagement
+        We’re a student-led nonprofit aiming to increase computer science engagement
       </Heading>
     </Center>
   );

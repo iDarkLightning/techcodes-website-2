@@ -1,28 +1,12 @@
-import {
-  Center,
-  Heading,
-  Image,
-  Box,
-  Text,
-  Stack,
-  Flex,
-  Avatar,
-  Circle,
-  Grid,
-  GridItem,
-  VStack,
-  Button,
-  HStack,
-} from "@chakra-ui/react";
-import { HTMLRenderer, Nav } from "@components";
-import React from "react";
-import ContentWrapper from "../home/components/ContentWrapper";
-import SectionWrapper from "../home/components/SectionWrapper";
-import BoxedImage from "@images/props/boxed.png";
+import { Avatar, Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
+import { Footer, Nav } from "@components";
 import BlastImage from "@images/props/blast.png";
+import BoxedImage from "@images/props/boxed.png";
+import React from "react";
 import { Member } from "../../pages/about";
+import ContentWrapper from "../home/components/ContentWrapper";
 import CTA from "../home/components/CTA";
-import Footer from "@components/footer";
+import SectionWrapper from "../home/components/SectionWrapper";
 
 const AboutView: React.FC<{ team: Member[] }> = ({ team }) => {
   return (

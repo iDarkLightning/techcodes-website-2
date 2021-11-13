@@ -14,7 +14,7 @@ const Stripes: React.FC = () => {
   return (
     <Box
       width="100vw"
-      transform="rotate(35deg)"
+      transform="rotate(30deg)"
       position="absolute"
       zIndex="-1"
       left="-13.71vw"
