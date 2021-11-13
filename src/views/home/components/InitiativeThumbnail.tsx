@@ -2,14 +2,15 @@ import { Box, Text, Image, Flex, Link } from "@chakra-ui/react";
 import React from "react";
 
 interface ThumbnailProps {
+  href: string;
   url: string;
   name: string;
   date: string;
   homePage?: boolean;
 }
 
-const Thumbnail: React.FC<ThumbnailProps> = ({ url, name, date, homePage }) => (
-  <Link href="/initiative">
+const Thumbnail: React.FC<ThumbnailProps> = ({ href, url, name, date, homePage }) => (
+  <Link href={href}>
     <Box role="group">
       <Flex
         w={homePage ? "34vw" : { sm: "100%", md: "43.75vw" }}

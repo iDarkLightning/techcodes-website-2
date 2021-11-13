@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { AboutView } from "@views";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 
 //TODO: Redo these typings later
 interface Image {
@@ -32,6 +33,8 @@ export interface AboutPageProps {
 const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
   return (
     <>
+      <Helmet title="About" />
+
       <AboutView team={data.allDatoCmsAbout.edges[0].node.team} />
     </>
   );

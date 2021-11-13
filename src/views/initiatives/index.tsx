@@ -8,7 +8,6 @@ import { Heading, SimpleGrid, Flex } from "@chakra-ui/react";
 interface InitiativesViewProps {
   data: any;
 }
-const IMAGE_URL = "https://www.datocms-assets.com/50019/1624285424-codefest.png?auto=format&w=1920";
 
 const InitiativesView: React.FC<InitiativesViewProps> = ({ data }) => {
   return (
@@ -26,6 +25,7 @@ const InitiativesView: React.FC<InitiativesViewProps> = ({ data }) => {
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="2.5vw" w="90vw">
           {data.map((content: any, index: number) => (
             <Thumbnail
+              href={content.slug}
               url={content.thumbnail.url}
               name={content.title}
               date={new Date().toLocaleDateString()}
