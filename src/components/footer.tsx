@@ -12,7 +12,7 @@ interface SocialLinkProps {
   w?: string;
 }
 
-const SocialLink: React.FC<SocialLinkProps> = ({ href, src, w = "2vw" }) => {
+const SocialLink: React.FC<SocialLinkProps> = ({ href, src, w = "4vh" }) => {
   return (
     <Link href={href} target="_blank">
       <Image src={src} w={w} />
@@ -22,20 +22,24 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, src, w = "2vw" }) => {
 
 const Footer: React.FC = () => {
   return (
-    <Flex h="40vh" alignItems="center" justifyContent="space-evenly">
+    <Flex
+      h="40vh"
+      alignItems="center"
+      justifyContent="space-evenly"
+      flexDirection={{ lg: "row", xs: "column" }}>
       <Image src={LogoIcon} h={{ base: "6vh", md: "10vh" }} />
 
       <Stack>
         <Box as="span" fontWeight="bold" fontSize={{ base: "3vw", md: "2vw" }}>
           <Text>Contact us</Text>
         </Box>
-        <Box as="span" fontWeight="medium" fontSize="0.8rem" color="#A8A8A8">
+        <Box as="span" fontWeight="medium" fontSize="1rem" color="#A8A8A8">
           <Text mt="-5px">team@techcodes.org</Text>
         </Box>
       </Stack>
 
       <Box>
-        <Text fontWeight="bold" fontSize="2vw">
+        <Text fontWeight="bold" fontSize="2rem">
           Socials
         </Text>
         <HStack alignItems="center">

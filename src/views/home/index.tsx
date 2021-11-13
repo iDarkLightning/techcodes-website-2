@@ -36,7 +36,7 @@ const HomeView: React.FC<HomeViewProps> = ({ data }) => {
         <ContentWrapper h="100%" mt="2rem">
           <Hero />
         </ContentWrapper>
-        <ContentWrapper h="45%">
+        <ContentWrapper h={{ xs: "60%", md: "60%", xl: "40%" }}>
           <Box ref={descriptionRef}>
             <DescriptionTitle />
             <DescriptionWrapper>
